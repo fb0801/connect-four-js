@@ -1,0 +1,14 @@
+/*different colours to use*/
+/*other variables to use*/
+/*Media queries*/
+.grid {
+  border: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 120px;
+  width: 140px;
+}
+.grid div {
+  height: 20px;
+  width: 20px;
+}/*# sourceMappingURL=style.css.map */
