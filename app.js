@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   //  function to listen to everytime we click on the grid
-for (var i=0, len = squares.length; i < len ; i++)
+for (var i=0, len = squares.length; i < len; i++)
 (function(index){
     //add onlick event to each square in your grid
     squares[i].onclick = function(){
@@ -17,14 +17,19 @@ for (var i=0, len = squares.length; i < len ; i++)
                 squares[index].classList.add('taken')
                 squares[index].classList.add('player-one')
                 //change the player
+                currentPlayer = 2
+                displayCurrentPlayer.innerHTML =currentPlayer
+            }else if (currentPlayer === 2){
+                squares[index].classList.add('token')
+                squares[index].classList.add('player-two')
+                //change the player
+                currentPlayer = 1
+                displayCurrentPlayer.innerHTML=currentPlayer
             }
-            
+            //if the square below your current square is not taken, you can't go on the spot
+            } else alert('Cant go here')
+
         }
-    }
-})
-
-
-
-
+    })(i)
 
 })
