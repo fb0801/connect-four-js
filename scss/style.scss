@@ -8,9 +8,20 @@ flex-wrap: wrap;
 height: 120px;
 width: 140px;
 
-    div{
+.grid{    
+div{
             height: 20px;
             width: 20px;
     }
 }
+}
 
+.player-one{
+    background-color:$forth-color ;
+    border-radius: 10px;
+}
+
+.player-two{
+    background-color:$fifth-color ;
+    border: 10px;
+}

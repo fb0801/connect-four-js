@@ -8,7 +8,17 @@
   height: 120px;
   width: 140px;
 }
-.grid div {
+.grid .grid div {
   height: 20px;
   width: 20px;
+}
+
+.player-one {
+  background-color: #ff652f;
+  border-radius: 10px;
+}
+
+.player-two {
+  background-color: #0099cc;
+  border: 10px;
 }/*# sourceMappingURL=style.css.map */
