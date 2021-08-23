@@ -1,15 +1,15 @@
 /*different colours to use*/
 /*other variables to use*/
 /*Media queries*/
-.grid, grid div {
-  border: 1px;
+.grid {
+  border: 1px solid;
   display: flex;
   flex-wrap: wrap;
   height: 120px;
   width: 140px;
 }
 
-grid div {
+.grid div {
   height: 20px;
   width: 20px;
 }
