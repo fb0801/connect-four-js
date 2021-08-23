@@ -9,8 +9,9 @@ height: 120px;
 width: 140px;
 }
 
-.grid{    
+grid{    
 div{
+    @extend .grid;
             height: 20px;
             width: 20px;
     }

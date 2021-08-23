@@ -1,7 +1,7 @@
 /*different colours to use*/
 /*other variables to use*/
 /*Media queries*/
-.grid {
+.grid, grid div {
   border: 1px;
   display: flex;
   flex-wrap: wrap;
@@ -9,7 +9,7 @@
   width: 140px;
 }
 
-.grid div {
+grid div {
   height: 20px;
   width: 20px;
 }
