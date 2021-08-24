@@ -109,11 +109,15 @@ function checkBoard(){
 
       //now take the value in array and match them into the squares
       for (let y=0;y<winningArray.length;y++){
-          const square1 = square[winningArray[y][0]]
+          const square1 = squares[winningArray[y][0]]
                 
-        const sqaure = square[winningArray]
-const sqaure = square[winningArray]
-const sqaure = square[winningArray]
+        const square2 = squares[winningArray[y][1]]
+const sqaure3 = squares[winningArray[y][2]]
+const sqaure4 = squares[winningArray[y][3]]
+
+//check those arrays to see if they all have the class of P1
+if(square1).classList.contains('player-one') &&
+square2.classList.contains('player-one') &&
 
 
 
