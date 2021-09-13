@@ -12,25 +12,27 @@ for (var i=0, len = squares.length; i < len; i++)
     //add onlick event to each square in your grid
     squares[i].onclick = function(){
         //if the square  below your current square is taken you can go ontop of it
-        if(squares[index + 7].classList.contains('taken')){
+        //if(squares[index + 7].classList.contains('taken')){
+            if(squares[i + 7].classList.contains('taken')&&!squares[i].classList.contains('taken')){
             if(currentPlayer ===1){
-                squares[index].classList.add('taken')
-                squares[index].classList.add('player-one')
+                squares[i].classList.add('taken')
+                squares[i].classList.add('player-one')
                 //change the player
                 currentPlayer = 2
                 displayCurrentPlayer.innerHTML =currentPlayer
             }else if (currentPlayer === 2){
-                squares[index].classList.add('token')
-                squares[index].classList.add('player-two')
+                squares[i].classList.add('taken')
+                squares[i].classList.add('player-two') //index
                 //change the player
                 currentPlayer = 1
                 displayCurrentPlayer.innerHTML=currentPlayer
             }
             //if the square below your current square is not taken, you can't go on the spot
             } else alert('Cant go here')
+            checkBoard()
 
         }
-    })(i)
+    })//(i)
 
 
 //check the board for a win or loss
@@ -108,23 +110,34 @@ function checkBoard(){
       ]
 
       //now take the value in array and match them into the squares
-      for (let y=0;y<winningArray.length;y++){
+      for (let y = 0; y < winningArray.length; y++) {
           const square1 = squares[winningArray[y][0]]
                 
         const square2 = squares[winningArray[y][1]]
-const sqaure3 = squares[winningArray[y][2]]
-const sqaure4 = squares[winningArray[y][3]]
+        const square3 = squares[winningArray[y][2]]
+        const square4 = squares[winningArray[y][3]]
 
 //check those arrays to see if they all have the class of P1
-if(square1).classList.contains('player-one') &&
-square2.classList.contains('player-one') &&
+if(
+    square1.classList.contains('player-one') &&
+    square2.classList.contains('player-one') &&
+    square3.classList.contains('player-one') &&
+    square4.classList.contains('player-one') 
 
+){
 
-
-      }
-
-    
+    result.innerHTML="Player One wins!"
 }
+//check those arrays to see if they all have the class of P2
+if(
+    square1.classList.contains('player-two') &&
+    square2.classList.contains('player-two') &&
+    square3.classList.contains('player-two') &&
+    square4.classList.contains('player-two') 
 
-
+){
+    result.innerHTML="Player Two wins!"
+}
+      }
+}
 })
